@@ -19,7 +19,9 @@ Ad tech is intentionally opaque so it is not clear to me how much of an impact l
 ![](docs/media/link_unwrapper_cli.png)
 
 ## Usage
-Simple HTTP GET to the RESTful endpoint /api/unwraplink/[URL encoded shortened link]. For example to unwrap the link `https://t.co/mB1G4eZhTn` the REST HTTP GET to the host `link-unwrapper.heokuapp.com` would be
+Simple HTTP GET to the RESTful endpoint /api/unwraplink/[URL encoded shortened link]. 
+
+For example to unwrap the link `https://t.co/mB1G4eZhTn` the REST HTTP GET to the host `link-unwrapper.heokuapp.com` would be
 
 ```
  curl https://link-unwrapper.herokuapp.com/api/unwraplink/https%3A%2F%2Ft.co%2FmB1G4eZhTn
