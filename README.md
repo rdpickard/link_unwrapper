@@ -11,3 +11,9 @@ Link Unwrapper is a simple web service with only one API endpoint that takes in 
 This version is intented to run on Heroku. The web service can be run locally for testing but that is likely to expose your IP to the URL shortener service which may weaken the ad tracking protections of Link Unwrapper. Running in the cloud means the unrwapping will be done from a differnet IP (the cloud service's) than the shortened URL was served to (your IP). Getting a running instance on Heroku is pretty easy with github integration. So you can run your own instance.
 
 Ad tech is intentionally opaque so it is not clear to me how much of an impact link unwrapping will have on privacy preservation. This is an experiment.
+
+#### Example GUI in Heroku
+![](docs/media/link_unwrapper_web_gui.png)
+
+#### Example command line to RESTful endpoint
+![](docs/media/link_unwrapper_cli.png)
