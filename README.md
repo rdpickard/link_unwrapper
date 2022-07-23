@@ -17,3 +17,35 @@ Ad tech is intentionally opaque so it is not clear to me how much of an impact l
 
 #### Example command line to RESTful endpoint
 ![](docs/media/link_unwrapper_cli.png)
+
+## Usage
+Simple HTTP GET to the RESTful endpoint /api/unwraplink/[URL encoded shortened link]. For example to unwrap the link `https://t.co/mB1G4eZhTn` the REST HTTP GET to the host `link-unwrapper.heokuapp.com` would be
+
+```
+ curl https://link-unwrapper.herokuapp.com/api/unwraplink/https%3A%2F%2Ft.co%2FmB1sdfsd
+```
+
+The REST call will respond with the following status codes
+- __404__ if the _wrapped_ URL returned a 404
+- __412__ if the GET request to the _wrapped_ URL did not respond with a redirect status code of 301, 302, 303, 307 or 308
+- __417__ if the response to the GET _wrapped_ URL did not include a `location` header
+- __200__ if the _wrapped_ URL was a redirect and had a location header
+
+The body of the response will be a json document in the format 
+
+```
+{
+    "message": "some message",
+    "location": "unwrapped URL value or NONE in case of an err"
+}
+```
+
+## Next work
+
+Make a Firefox plugin that alters pages to unwrap detected shortened URLs
+
+## Things I don't know
+
+- Do Twitter shortened links expire?
+- Are all Twitter shortened links the same for all users?
+- Other link shortener services
