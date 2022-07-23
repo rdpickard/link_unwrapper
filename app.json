@@ -1,0 +1,11 @@
+{
+  "name": "Link Unwrapper",
+  "description": "Deobfuscation of link shorteners",
+  "logo": "https://github.com/rdpickard/link_unwrapper/raw/master/media/lily_logo.png",
+  "repository": "https://github.com/rdpickard/link_unwrapper",
+  "keywords": [
+    "python3",
+    "express",
+    "static"
+  ]
+}
